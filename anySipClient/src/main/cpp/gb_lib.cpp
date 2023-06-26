@@ -1445,7 +1445,7 @@ bool dt_eXosip_printEvent(eXosip_t *context, eXosip_event_t *p_event) {
                 memset(ip, 0, 16);
                 memset(rtmp_url, 0, 128);
                 strncpy(ip, start + 9, end - start - 9);
-                snprintf(rtmp_url, 128, "rtp://%s:1935/broadcast/%s_%s",
+                snprintf(rtmp_url, 128, "rtmp://%s:1935/broadcast/%s_%s",
                          ip, target_id, device_info.ipc_id);
                 LOGD("---\nip = %s;\tTargetID=%s;\trtmp_url=%s\n---",
                      ip, target_id, rtmp_url);
